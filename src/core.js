@@ -1362,6 +1362,7 @@ Handsontable.Core = function (rootElement, settings) {
 
     if (typeof row === "object") { //is it an array of changes
       changes = row;
+      if (prop) {source = prop}; //MODIFIED BY JONATHAN FOR CIRCUITHUB -- Enables source name to be passed in as parameter when specifying changes as an array
     }
     else if ($.isPlainObject(value)) { //backwards compatibility
       changes = value;
